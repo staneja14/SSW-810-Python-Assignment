@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="jumbotron">
+    <blockquote class="blockquote text-center">
+        <p class="mb-0 text-monospace">
+            {{ table_title }}
+        </p>
+    </blockquote>
+    <div class="container">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <table class="table table-striped text-monospace">
+                <thead>
+                    <tr>
+                        <th scope="col">CWID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Major</th>
+                        <th scope="col">Complete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for student in data %}
+                    <tr>
+                        <th scope="row">{{ student.cwid }}</th>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.major }}</td>
+                        <td>{{ student.complete }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

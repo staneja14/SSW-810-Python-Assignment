@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="container text-center">
+            <main role="main" class="inner cover">
+                <img src="download.png" class="img-fluid">
+                <h1 class="cover-heading text-monospace">{{ title }}</h1>
+
+                <p class="text-monospace">Welcome to {{ title }} Website built using Python, Flask, SQLite3 Database and Bootstrap 4. You can access the Student and Professor information from here:--</p>
+                <p class="text-monospace">
+                    <a class="btn btn-primary" href="students" role="button">Students</a>
+                    <a class="btn btn-primary" href="instructors" role="button">Professors</a>
+                </p>
+            </main>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
